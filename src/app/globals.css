@@ -7,6 +7,9 @@
   --primary: #1b9c54;
   --secondary: #e6e6e9;
 
+  --highlight: #b5ff6d;
+  --border: #23232a;
+
   --font-heading: var(--font-maron-barista);
   --font-body: var(--font-inter);
 }
@@ -15,8 +18,11 @@
   --background: #09090b;
   --foreground: #fdfefe;
 
-  --primary: #4ac674;
+  --primary: #00bc7d;
   --secondary: #111116;
+
+  --highlight: #b5ff6d;
+  --border: #23232a;
 }
 
 @theme inline {
@@ -25,6 +31,24 @@
 
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+
+  --color-highlight: var(--highlight);
+  --color-border: var(--border)
+}
+
+@layer utilities{
+
+  @media screen and (min-width: 48rem) {
+    .container{
+      max-width: 48rem;
+    }
+  }
+
+  @media screen and (min-width: 64rem) {
+    .container{
+      max-width: 64rem;
+    }
+  }
 }
 
 body {
@@ -43,6 +67,16 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading), sans-serif;
+}
+
+section{
+  padding: 6rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  section{
+    padding: 8rem 0;
+  }
 }
 
 /* hamburger */
@@ -99,4 +133,12 @@ path:nth-child(6) {
 }
 .hamburger-active path:nth-child(6) {
   transform: translateX(9px) translateY(1px) rotate(45deg);
+}
+
+
+/* to avoid layout shift */
+iconify-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
 }

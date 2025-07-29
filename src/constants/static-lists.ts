@@ -21,3 +21,20 @@ export const NAV_ITEMS = [
         href: "#blogs",
     },
 ]
+
+export const SOCIAL_LINKS = [
+    {
+        label: 'Github',
+        icon: "mdi:github",
+        link: '#'
+    },
+    {
+        label: 'LinkedIn',
+        icon: "mdi:linkedin",
+        link: '#'
+    }, {
+        label: 'Gmail',
+        icon: "mdi:gmail",
+        link: '#'
+    }
+]

@@ -1,9 +1,9 @@
-import Typography from "@/components/ui/Typography";
+import HeroSection from "@/sections/HeroSection";
 
 export default function Home() {
   return (
       <main className="min-h-[200vh]">
-        <Typography variant="h1">  </Typography>
+        <HeroSection />
       </main>
   );
 }
