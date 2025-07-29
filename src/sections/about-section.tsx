@@ -1,16 +1,26 @@
 import ScrollReveal from "@/components/scroll-reveal/scroll-reveal";
 import Typography from "@/components/ui/Typography";
+import arrowAnimationData from "@/lotties/arrow.json";
+import LottieWrapper from "@/components/lottie-wrapper/lottie-wrapper";
 
 export default function AboutSection() {
   return (
     <section>
-      <Typography
-        component="h5"
-        variant={"h5"}
-        className="text-center text-highlight"
-      >
-        About Me
-      </Typography>
+      <div className="flex items-center justify-center relative">
+        <LottieWrapper
+          className="absolute w-20 left-[30%] -top-8"
+          animationData={arrowAnimationData}
+          loop={true}
+          autoplay={true}
+        />
+        <Typography
+          component="h5"
+          variant={"h5"}
+          className="text-center text-highlight"
+        >
+          About Me
+        </Typography>
+      </div>
 
       <ScrollReveal
         baseOpacity={0.1}
