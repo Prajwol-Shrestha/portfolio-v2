@@ -136,9 +136,41 @@ path:nth-child(6) {
 }
 
 
-/* to avoid layout shift */
-iconify-icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
+.mask{
+  -webkit-mask-image: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+@keyframes scroll-sm {
+  to {
+    transform: translate(calc(-50% - 1rem)); /* gap-8 = 2rem → 1rem offset */
+  }
+}
+
+@keyframes scroll-md {
+  to {
+    transform: translate(calc(-50% - 1.5rem)); /* gap-12 = 3rem → 1.5rem offset */
+  }
+}
+
+@keyframes scroll-lg {
+  to {
+    transform: translate(calc(-50% - 2.25rem)); /* gap-18 = 4.5rem → 2.25rem offset */
+  }
+}
+
+.scroll-track {
+  animation: scroll-sm 40s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .scroll-track {
+    animation: scroll-md 40s linear infinite;
+  }
+}
+
+@media (min-width: 1024px) {
+  .scroll-track {
+    animation: scroll-lg 40s linear infinite;
+  }
 }
