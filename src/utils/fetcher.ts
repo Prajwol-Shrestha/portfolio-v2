@@ -1,7 +1,7 @@
 export default async function fetcher<T>(
   url: string,
   queryParams?: Record<string, any>
-): Promise<T> {
+): Promise<T | undefined> {
   try {
     const endpoint = new URL(url);
     if (queryParams) {
@@ -13,6 +13,7 @@ export default async function fetcher<T>(
 
     return data;
   } catch (err) {
-    throw new Error("Failed to fetch");
+    console.error(err);
+    // throw new Error("Failed to fetch");
   }
 }

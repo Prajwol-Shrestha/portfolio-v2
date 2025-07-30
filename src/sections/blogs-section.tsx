@@ -1,19 +1,31 @@
+"use client"
+
 import BlogCard from "@/components/cards/blog-card";
-import ProjectCard from "@/components/cards/project-card";
 import Typography from "@/components/ui/Typography";
 import { BASE_FORUMS_URL } from "@/constants/endpoints";
-import { PROJECTS } from "@/constants/static-lists";
 import { IDevToArticle } from "@/types/forums-api-type";
 import fetcher from "@/utils/fetcher";
 import clsx from "clsx";
+import { useEffect, useState } from "react";
 
-export default async function BlogsSections() {
+export default function BlogsSections() {
+  const [blogs, setBlogs] = useState<IDevToArticle[]>([])
   const query = {
     username: "prajwolshrestha",
     page: 1,
     per_page: 3,
   };
-  const blogs = (await fetcher<IDevToArticle[]>(BASE_FORUMS_URL, query)) || [];
+
+  useEffect(() => {
+    async function get() {
+      const blogss = (await fetcher<IDevToArticle[]>(BASE_FORUMS_URL, query)) || [];
+      setBlogs(blogss)
+      console.log(blogss,'sad')
+    }
+
+    get()
+    
+  }, [])
 
   return (
     <>
