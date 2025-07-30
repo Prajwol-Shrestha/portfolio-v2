@@ -56,3 +56,29 @@ export const TECHNOLOGIES = [
   { label: 'Prisma', image: '/icons/prisma.svg' },
   { label: 'Supabase', image: '/icons/supabase.svg' },
 ];
+
+
+
+export const PROJECTS = [
+    {
+        name: 'Project One',
+        screenshot: 'https://unsplash.it/300/400',
+        github: '#',
+        deployedUrl: '#',
+        type: 'frontend'
+    },
+    {
+        name: 'Project two',
+        screenshot: 'https://unsplash.it/300/400',
+        github: '#',
+        deployedUrl: '#',
+        type: 'fullstack'
+    },
+    {
+        name: 'Project 3',
+        screenshot: 'https://unsplash.it/300/400',
+        github: '#',
+        deployedUrl: '#',
+        type: 'fullstack'
+    }
+]
