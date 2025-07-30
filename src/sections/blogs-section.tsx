@@ -26,6 +26,7 @@ export default async function BlogsSections() {
           <div className="mt-8 space-y-8">
             {blogs.map((blog, index) => (
               <BlogCard
+                key={index}
                 blog={blog}
                 className={clsx("", {
                   "flex-row-reverse": index % 2 === 0,

@@ -13,7 +13,7 @@ export default function ProjectsSection() {
       </Typography>
 
       <div className="mt-8 sm:grid sm:grid-cols-2 sm:gap-8">
-        {PROJECTS.map(project => <ProjectCard project={project} />)}
+        {PROJECTS.map((project, index) => <ProjectCard key={index} project={project} />)}
       </div>
     </section>
   );
