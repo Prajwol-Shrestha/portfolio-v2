@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${maronBarista.variable} antialiased flex flex-col min-h-screen container mx-auto px-6 md:px-0`}
+        className={`${inter.variable} ${maronBarista.variable} antialiased flex flex-col min-h-screen container !mx-auto px-6 md:px-0`}
       >
         <ThemeProvider
           attribute="class"

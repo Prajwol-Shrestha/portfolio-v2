@@ -61,24 +61,35 @@ export const TECHNOLOGIES = [
 
 export const PROJECTS = [
     {
-        name: 'Project One',
-        screenshot: 'https://unsplash.it/300/400',
-        github: '#',
-        deployedUrl: '#',
-        type: 'frontend'
+        name: 'bitinfoNepal',
+        screenshot: '/images/bitinfoNepal.png',
+        github: null,
+        deployedUrl: 'https://www.bitinfonepal.com/',
+        type: 'full stack',
+        description: 'Educational Platform for BIT students'
     },
     {
-        name: 'Project two',
-        screenshot: 'https://unsplash.it/300/400',
-        github: '#',
-        deployedUrl: '#',
-        type: 'fullstack'
+        name: 'Manga Spot',
+        screenshot: '/images/manga-spot.png',
+        github: 'https://github.com/Prajwol-Shrestha/manga-spot-frontend',
+        deployedUrl: 'https://manga-spot.prajwolshrestha08.workers.dev/',
+        type: 'full stack',
+        description: 'Manga spot is a free manga reader app'
     },
     {
-        name: 'Project 3',
-        screenshot: 'https://unsplash.it/300/400',
-        github: '#',
-        deployedUrl: '#',
-        type: 'fullstack'
-    }
+        name: 'Bill Splitter',
+        screenshot: '/images/bill-splitter.png',
+        github: 'https://github.com/Prajwol-Shrestha/Prajwol-Shrestha.github.io/tree/main/Front%20End%20Mentor/tip-calculator-app-main',
+        deployedUrl: 'https://prajwol-shrestha.github.io/Front%20End%20Mentor/tip-calculator-app-main/',
+        type: 'frontend',
+        description: 'Frontend mentor challenge'
+    },
+     {
+        name: 'Space Toursim',
+        screenshot: '/images/space-tourism.png',
+        github: 'https://github.com/Prajwol-Shrestha/Space-Tourism-Website',
+        deployedUrl: 'https://space-tourism-frontend-mentor-jr.netlify.app/',
+        type: 'frontend',
+        description: 'Frontend mentor challenge'
+    },
 ]

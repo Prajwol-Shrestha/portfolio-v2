@@ -40,16 +40,20 @@
 
   @media screen and (min-width: 48rem) {
     .container{
-      max-width: 48rem;
+      max-width: 48rem !important;
     }
   }
 
   @media screen and (min-width: 64rem) {
     .container{
-      max-width: 64rem;
+      max-width: 64rem !important;
     }
   }
 }
+
+/* body[data-scroll-locked]{
+  padding: 0 !important;
+} */
 
 body {
   --font-heading: var(--font-maron-barista);
