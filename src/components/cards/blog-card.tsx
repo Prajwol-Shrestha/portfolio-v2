@@ -27,8 +27,8 @@ export default function BlogCard({ blog, className }: IProps) {
 
   return (
     <Link href={url} target="_blank" className="block">
-      <div className={cn("bg-secondary rounded-xl p-6 flex gap-4", className)}>
-        <div className="h-40 w-70 shrink-0">
+      <div className={cn("bg-secondary rounded-xl p-6 flex gap-4 sm:flex-row", className)}>
+        <div className="h-40 w-70 shrink-0 hidden sm:block">
           <img
             src={imageUrl}
             alt={title}
@@ -44,10 +44,7 @@ export default function BlogCard({ blog, className }: IProps) {
           <div className="flex flex-wrap gap-0.5">
             <Typography variant={"body2"} className="text-gray-400">
               {" "}
-              <span className="font-semibold">
- Published:
-              </span>
-              {" "}{longDate}{" "}
+              <span className="font-semibold">Published:</span> {longDate}{" "}
             </Typography>
             <Dot className="text-gray-400" />
             <Typography variant={"body2"} className="text-gray-400">
