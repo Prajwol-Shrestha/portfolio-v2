@@ -51,9 +51,9 @@
   }
 }
 
-/* body[data-scroll-locked]{
+body[data-scroll-locked]{
   padding: 0 !important;
-} */
+}
 
 body {
   --font-heading: var(--font-maron-barista);
