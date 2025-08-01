@@ -30,7 +30,7 @@
     // },
   ],
   "routes": [{
-    "zone_name": "shresthaprajwol.com.np",
+    "pattern": "shresthaprajwol.com.np",
     "custom_domain": true
   }]
 }
