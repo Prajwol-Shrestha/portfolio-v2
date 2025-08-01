@@ -28,5 +28,9 @@
     //   "binding": "NEXT_INC_CACHE_R2_BUCKET",
     //   "bucket_name": "<BUCKET_NAME>",
     // },
-  ]
+  ],
+  "routes": [{
+    "zone_name": "shresthaprajwol.com.np",
+    "custom_domain": true
+  }]
 }
