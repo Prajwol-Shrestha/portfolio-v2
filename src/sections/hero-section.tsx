@@ -39,9 +39,8 @@ export default function HeroSection() {
         <div className="flex items-center gap-3">
           {" "}
           {SOCIAL_LINKS.map((social) => (
-            <Link href={social.link} target="_blank">
+            <Link key={social.label} href={social.link} target="_blank">
               <Button
-                key={social.label}
                 variant="link"
                 className="rounded-full text-white uppercase"
               >

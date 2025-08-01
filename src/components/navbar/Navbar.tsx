@@ -5,6 +5,8 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import React, { useEffect, useRef } from "react";
 import { ThemeToggle } from "../theme-toggle/theme-toggle";
 import Typography from "../ui/Typography";
+import { TextRoll } from "../text-animations/text-roll";
+import Link from "next/link";
 
 const SCROLLED_CLASSNAMES = [
   "border-foreground",
@@ -48,31 +50,26 @@ export default function Navbar() {
     };
   }, [isMobile]);
 
-  function handleScrollToSection(sectionId: string) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  }
-
   return (
     <>
       <nav
         ref={navbarRef}
         className="mx-auto w-full border mt-3 py-4 border-background rounded-full flex items-center justify-between"
       >
-        <Typography variant={'h6'} className="font-bold">PS</Typography>
+        <Typography variant={"h6"} className="font-bold">
+          PS
+        </Typography>
 
         <div className="hidden md:flex items-center gap-8">
           {NAV_ITEMS.map((item) => (
-            <Typography
-              variant={"body2"}
-              key={item.label}
-              onClick={() => handleScrollToSection(item.href)}
-              className="cursor-pointer hover:text-primary transition-colors duration-300"
-            >
-              {item.label}
-            </Typography>
+            <Link href={item.href}>
+              <TextRoll
+                key={item.label}
+                className="cursor-pointer hover:text-highlight transition-colors duration-300"
+              >
+                {item.label}
+              </TextRoll>
+            </Link>
           ))}
         </div>
         <div className="">
