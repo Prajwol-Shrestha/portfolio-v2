@@ -7,7 +7,7 @@ import TechonologiesSection from "@/sections/technologies-section";
 
 export default function Home() {
   return (
-    <main className="min-h-[200vh]">
+    <main className="section-wrapper">
       <HeroSection />
       <TechonologiesSection />
       <AboutSection />

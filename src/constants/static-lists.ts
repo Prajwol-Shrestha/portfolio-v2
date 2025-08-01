@@ -26,16 +26,16 @@ export const SOCIAL_LINKS = [
     {
         label: 'Github',
         icon: "mdi:github",
-        link: '#'
+        link: 'https://github.com/Prajwol-Shrestha'
     },
     {
         label: 'LinkedIn',
         icon: "mdi:linkedin",
-        link: '#'
+        link: 'https://www.linkedin.com/in/prajwol-shrestha-04265a241/'
     }, {
         label: 'Gmail',
         icon: "mdi:gmail",
-        link: '#'
+        link: 'mailto:prajwolshrestha08@gmail.com'
     }
 ]
 

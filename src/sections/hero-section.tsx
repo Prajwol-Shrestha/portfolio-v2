@@ -4,8 +4,7 @@ import Typography from "@/components/ui/Typography";
 import { SOCIAL_LINKS } from "@/constants/static-lists";
 import Link from "next/link";
 import React from "react";
-import {Icon} from '@iconify/react'
-
+import { Icon } from "@iconify/react";
 
 export default function HeroSection() {
   return (
@@ -40,14 +39,16 @@ export default function HeroSection() {
         <div className="flex items-center gap-3">
           {" "}
           {SOCIAL_LINKS.map((social) => (
-            <Button
-              key={social.label}
-              variant="link"
-              className="rounded-full text-white uppercase"
-            >
-              {social.label}
-              <Icon icon="mingcute:arrow-right-up-line" ssr={true} />
+            <Link href={social.link} target="_blank">
+              <Button
+                key={social.label}
+                variant="link"
+                className="rounded-full text-white uppercase"
+              >
+                {social.label}
+                <Icon icon="mingcute:arrow-right-up-line" ssr={true} />
               </Button>
+            </Link>
           ))}{" "}
         </div>
 
