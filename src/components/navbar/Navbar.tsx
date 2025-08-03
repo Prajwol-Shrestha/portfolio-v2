@@ -63,12 +63,12 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           {NAV_ITEMS.map((item) => (
             <Link href={item.href} key={item.label}>
-              <TextRoll
-            
+              <Typography
+                variant={"body2"}
                 className="cursor-pointer hover:text-highlight transition-colors duration-300"
               >
                 {item.label}
-              </TextRoll>
+              </Typography>
             </Link>
           ))}
         </div>
