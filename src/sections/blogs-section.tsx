@@ -2,7 +2,7 @@
 
 import BlogCard from "@/components/cards/blog-card";
 import Typography from "@/components/ui/Typography";
-import { BASE_FORUMS_URL } from "@/constants/endpoints";
+import { ENDPOINTS } from "@/constants/endpoints";
 import { IDevToArticle } from "@/types/forums-api-type";
 import fetcher from "@/utils/fetcher";
 import clsx from "clsx";
@@ -18,7 +18,7 @@ export default function BlogsSections() {
 
   useEffect(() => {
     async function get() {
-      const blogss = (await fetcher<IDevToArticle[]>(BASE_FORUMS_URL, query)) || [];
+      const blogss = (await fetcher<IDevToArticle[]>(ENDPOINTS.blogs.getAllArtcles, query)) || [];
       setBlogs(blogss)
       console.log(blogss,'sad')
     }

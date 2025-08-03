@@ -1,2 +1,7 @@
 
-export const BASE_FORUMS_URL = 'https://dev.to/api/articles'
+export const ENDPOINTS = {
+    blogs: {
+        getAllArtcles: 'https://dev.to/api/articles',
+        getSingleArticle: 'https://dev.to/api/articles/:id',
+    }
+}

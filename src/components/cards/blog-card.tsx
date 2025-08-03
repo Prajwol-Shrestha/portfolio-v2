@@ -18,7 +18,7 @@ export default function BlogCard({ blog, className }: IProps) {
     title,
     published_at,
     tag_list,
-    url,
+    id,
     reading_time_minutes,
   } = blog;
   const imageUrl = cover_image || social_image;
@@ -26,7 +26,7 @@ export default function BlogCard({ blog, className }: IProps) {
   const longDate = formatDateLongStyle(published_at);
 
   return (
-    <Link href={url} target="_blank" className="block">
+    <Link href={`/blogs/${id}`} className="block">
       <div className={cn("bg-secondary rounded-xl p-6 flex gap-4 sm:flex-row", className)}>
         <div className="h-40 w-70 shrink-0 hidden sm:block">
           <img

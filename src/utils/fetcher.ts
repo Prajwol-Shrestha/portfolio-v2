@@ -14,6 +14,8 @@ export default async function fetcher<T>(
     return data;
   } catch (err) {
     console.error(err);
-    // throw new Error("Failed to fetch");
+    if (err instanceof Error) throw err;
+
+    throw new Error("Failed to fetch");
   }
 }

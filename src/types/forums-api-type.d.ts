@@ -36,3 +36,10 @@ export interface IDevToArticle {
     profile_image_90: string;
   };
 }
+
+export interface IDevToArticleDetails extends IDevToArticle {
+  body_html: string;
+  body_markdown: string;
+  tags: string[];
+  tag_list: string;
+}

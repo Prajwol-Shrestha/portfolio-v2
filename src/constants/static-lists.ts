@@ -4,21 +4,21 @@ export const NAV_ITEMS = [
         label: "Home",
         href: "/",
     },
-    {
-        label: "Skills",
-        href: "#skills",
-    },
+    // {
+    //     label: "Skills",
+    //     href: "#skills",
+    // },
     {
         label: "Projects",
-        href: "#projects",
+        href: "/projects",
     },
       {
         label: "Experience",
-        href: "#experience",
+        href: "/experiences",
     },
     {
         label: "Blogs",
-        href: "#blogs",
+        href: "/blogs",
     },
 ]
 
