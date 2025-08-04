@@ -51,6 +51,10 @@
   }
 }
 
+html, body{
+  scroll-behavior: smooth;
+}
+
 body[data-scroll-locked]{
   padding: 0 !important;
 }

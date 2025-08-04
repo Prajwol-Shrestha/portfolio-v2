@@ -51,7 +51,7 @@ export default function HeroSection() {
           ))}{" "}
         </div>
 
-        <Link href={"/about"}>
+        <Link href={"#contact-section"}>
           <Button variant={"outline"} className="rounded-full">
             {" "}
             Know me Better{" "}

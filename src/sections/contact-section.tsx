@@ -63,7 +63,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section className="flex gap-12 justify-between items-center">
+    <section id="contact-section" className="flex gap-12 justify-between items-center">
       <div className="basis-full sm:basis-2/3">
         <Typography variant={"h5"} component="h5" className="text-highlight">
           Connect with Me
