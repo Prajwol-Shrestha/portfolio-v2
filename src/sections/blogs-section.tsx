@@ -1,34 +1,20 @@
-"use client"
+"use client";
 
 import BlogCard from "@/components/cards/blog-card";
 import Typography from "@/components/ui/Typography";
-import { ENDPOINTS } from "@/constants/endpoints";
-import { IDevToArticle } from "@/types/forums-api-type";
-import fetcher from "@/utils/fetcher";
+import useGetBlogs from "@/hooks/useGetBlogs";
 import clsx from "clsx";
-import { useEffect, useState } from "react";
 
 export default function BlogsSections() {
-  const [blogs, setBlogs] = useState<IDevToArticle[]>([])
   const query = {
-    username: "prajwolshrestha",
     page: 1,
     per_page: 3,
   };
-
-  useEffect(() => {
-    async function get() {
-      const blogss = (await fetcher<IDevToArticle[]>(ENDPOINTS.blogs.getAllArtcles, query)) || [];
-      setBlogs(blogss)
-      console.log(blogss,'sad')
-    }
-
-    get()
-    
-  }, [])
+  const { blogs, isLoading } = useGetBlogs(query);
 
   return (
     <>
+      {isLoading && <> loading... </>}
       {blogs ? (
         <section>
           <Typography variant={"h5"} component="h5" className="text-highlight">
