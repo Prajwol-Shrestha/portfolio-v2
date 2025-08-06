@@ -17,7 +17,7 @@ export default function BlogsSections() {
       {isLoading && <> loading... </>}
       {blogs ? (
         <section>
-          <Typography variant={"h5"} component="h5" className="text-highlight">
+          <Typography variant={"h5"} component="h5" className="text-highlight font-semibold">
             Latest Blogs
           </Typography>
 

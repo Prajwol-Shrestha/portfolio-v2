@@ -44,7 +44,7 @@ export default function RootLayout({
           enableSystem
           // disableTransitionOnChange
         >
-          <InDevelopmentModal />
+          {/* <InDevelopmentModal /> */}
           <Navbar />
           {children}
           <Footer />

@@ -8,9 +8,9 @@ export default function Blogs() {
   const { blogs, isLoading } = useGetBlogs();
 
   return (
-    <main className="section-wrapper">
-      <section className="space-y-8">
-        <Typography variant={"h3"} component="h3" className="text-highlight">
+    <main>
+      <section className="space-y-8 my-22">
+        <Typography variant={"h3"} component="h3" className="text-highlight font-semibold">
           Latest Blogs
         </Typography>
         {isLoading && <> loading... </>}

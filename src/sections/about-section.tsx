@@ -16,7 +16,7 @@ export default function AboutSection() {
         <Typography
           component="h5"
           variant={"h5"}
-          className="text-center text-highlight"
+          className="text-center text-highlight font-semibold"
         >
           About Me
         </Typography>

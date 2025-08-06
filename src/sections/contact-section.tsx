@@ -65,7 +65,7 @@ export default function ContactSection() {
   return (
     <section id="contact-section" className="flex gap-12 justify-between items-center">
       <div className="basis-full sm:basis-2/3">
-        <Typography variant={"h5"} component="h5" className="text-highlight">
+        <Typography variant={"h5"} component="h5" className="text-highlight font-semibold">
           Connect with Me
         </Typography>
         <Typography variant={"h4"} className="font-bold mb-6">

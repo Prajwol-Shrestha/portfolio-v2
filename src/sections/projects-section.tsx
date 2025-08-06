@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function ProjectsSection() {
   return (
     <section>
-      <Typography variant={"h5"} component="h5" className="text-highlight">
+      <Typography variant={"h5"} component="h5" className="text-highlight font-semibold">
         My Work
       </Typography>
       <Typography variant={'h4'}>

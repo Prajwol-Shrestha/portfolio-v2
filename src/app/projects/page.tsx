@@ -12,11 +12,11 @@ export default function page() {
   );
   return (
     <main>
-      <section className="my-18">
+      <section className="my-22">
         <Typography
           component="h4"
           variant={"h5"}
-          className="uppercase text-highlight"
+          className="uppercase text-highlight font-semibold"
         >
           {" "}
           My works{" "}
