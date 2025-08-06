@@ -19,7 +19,7 @@ export default function CareerCard({ className, career }: IProps) {
   const { company, role, duration, responsibilities } = career;
   return (
     <div className={cn("flex gap-8 ", className)}>
-      <div className="w-1/2">
+      <div className="sm:w-1/2">
         <Typography component="h6" variant={"h6"} className="font-semibold">
           {" "}
           {company}{" "}
