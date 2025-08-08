@@ -8,10 +8,8 @@ export default function AboutSection() {
     <section>
       <div className="flex items-center justify-center relative">
         <LottieWrapper
-          className="absolute w-20 left-[30%] -top-8"
+          className="absolute w-16 sm:w-20 left-[20%] sm:left-[35%] -top-8"
           animationData={arrowAnimationData}
-          loop={true}
-          autoplay={true}
         />
         <Typography
           component="h5"
