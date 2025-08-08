@@ -60,7 +60,7 @@ export const TECHNOLOGIES = [
 export const PROJECTS = [
   {
     name: "bitinfoNepal",
-    screenshot: "/images/bitinfoNepal.png",
+    screenshot: "/images/bitinfoNepal.webp",
     github: null,
     deployedUrl: "https://www.bitinfonepal.com/",
     type: "full stack",
@@ -68,7 +68,7 @@ export const PROJECTS = [
   },
   {
     name: "Manga Spot",
-    screenshot: "/images/manga-spot.png",
+    screenshot: "/images/manga-spot.webp",
     github: "https://github.com/Prajwol-Shrestha/manga-spot-frontend",
     deployedUrl: "https://manga-spot.prajwolshrestha08.workers.dev/",
     type: "full stack",
@@ -76,7 +76,7 @@ export const PROJECTS = [
   },
   {
     name: "Bill Splitter",
-    screenshot: "/images/bill-splitter.png",
+    screenshot: "/images/bill-splitter.webp",
     github:
       "https://github.com/Prajwol-Shrestha/Prajwol-Shrestha.github.io/tree/main/Front%20End%20Mentor/tip-calculator-app-main",
     deployedUrl:
@@ -86,7 +86,7 @@ export const PROJECTS = [
   },
   {
     name: "Space Toursim",
-    screenshot: "/images/space-tourism.png",
+    screenshot: "/images/space-tourism.webp",
     github: "https://github.com/Prajwol-Shrestha/Space-Tourism-Website",
     deployedUrl: "https://space-tourism-frontend-mentor-jr.netlify.app/",
     type: "frontend",
@@ -99,6 +99,20 @@ export const CAREERS = [
     company: "Nutrogen",
     role: "Full Stack Developer",
     duration: "December 2024 - June 2025",
+    items: [
+      {
+        link: null,
+        image: "/images/nutrogen-user-dashboard.webp",
+      },
+      {
+        link: null,
+        image: "/images/nutrogen-stepper.webp",
+      },
+      {
+        link: null,
+        image: "/images/nutrogen-admin-dashboard.webp",
+      },
+    ],
     responsibilities:
       "Developed core features across the stack using React on the frontend and Nest.js on the backend, with a strong emphasis on clean, reusable components and scalable APIs. Teamed up with designers, developers, and QA in Agile sprints to ship new features and quickly fix issues.",
   },
@@ -106,6 +120,20 @@ export const CAREERS = [
     company: "Nepa Rudraksha",
     role: "Frontend Developer",
     duration: "June 2024 - November 2024",
+    items: [
+      {
+        link: null,
+        image: "/images/nepa.webp",
+      },
+      {
+        link: null,
+        image: "/images/sanatana-stepper.webp",
+      },
+      {
+        link: null,
+        image: "/images/sanatana-landing.webp",
+      },
+    ],
     responsibilities:
       "Built and maintained the frontend for internal tools and landing pages using Next.js, focusing on component reusability and performance. Developed Shopify frontend components separately, worked on custom sections and UI features to enhance the store experience.",
   },
@@ -113,6 +141,20 @@ export const CAREERS = [
     company: "Samsara Social",
     role: "Associate Front-end Developer (React)",
     duration: "December 2022 - August 2023",
+    items: [
+      {
+        link: null,
+        image: "/images/orderq.webp",
+      },
+      {
+        link: null,
+        image: "/images/samsara-landing.webp",
+      },
+      {
+        link: null,
+        image: "/images/samsara-landing.webp",
+      },
+    ],
     responsibilities:
       "Built and improved interactive components using React and React Native, turning design ideas and user feedback into smooth, responsive UI. Collaborated with backend developers to connect the frontend with REST APIs, ensuring seamless data flow across web and mobile platforms.",
   },

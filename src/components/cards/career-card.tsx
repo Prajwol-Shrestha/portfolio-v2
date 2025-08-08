@@ -2,21 +2,48 @@ import cn from "@/utils/cn";
 import React from "react";
 import Typography from "../ui/Typography";
 import Folder from "../folder/folder";
+import Link from "next/link";
 
 type ICareer = {
   company: string;
   role: string;
   duration: string;
   responsibilities: string;
+  items: {
+    link: string | null;
+    image: string;
+  }[];
 };
 
 interface IProps {
   className?: string;
   career: ICareer;
 }
-
 export default function CareerCard({ className, career }: IProps) {
-  const { company, role, duration, responsibilities } = career;
+  const { company, role, duration, responsibilities, items } = career;
+
+  const paperItems = items.map((item, index) => {
+    return (
+      <div key={index} className="h-full">
+        {item.link ? (
+          <Link href={item.link}>
+            <img
+              src={item.image}
+              alt="project-screenshot"
+              className="object-cover h-full rounded-[10px]"
+            />
+          </Link>
+        ) : (
+          <img
+            src={item.image}
+            alt="project-screenshot"
+            className="object-cover h-full rounded-[10px]"
+          />
+        )}
+      </div>
+    );
+  });
+
   return (
     <div className={cn("flex gap-8 ", className)}>
       <div className="sm:w-1/2">
@@ -35,7 +62,12 @@ export default function CareerCard({ className, career }: IProps) {
         </Typography>
       </div>
       <div className="hidden sm:flex sm:items-center sm:justify-center w-1/2">
-        <Folder size={2} color="#5227FF" className="flex items-center justify-center" />
+        <Folder
+          size={2}
+          color="#5227FF"
+          className="flex items-center justify-center"
+          items={paperItems}
+        />
       </div>
     </div>
   );

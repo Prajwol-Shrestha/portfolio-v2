@@ -16,7 +16,6 @@ export default function page() {
           {CAREERS.map((career, index) => (
             <div key={index}>
               <CareerCard
-                key={index}
                 career={career}
                 className={clsx("", {
                   "flex-row-reverse": (index + 1) % 2 === 0,
