@@ -9,7 +9,7 @@ export default function Blogs() {
 
   return (
     <main>
-      <section className="space-y-8 my-22">
+      <section className="space-y-8 my-12 sm:my-22">
         <Typography variant={"h3"} component="h3" className="text-highlight font-semibold">
           Latest Blogs
         </Typography>

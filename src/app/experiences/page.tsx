@@ -8,7 +8,7 @@ import React from "react";
 export default function page() {
   return (
     <main>
-      <section className="my-22">
+      <section className="my-12 sm:my-22">
         <Typography component={"h3"} variant={"h4"} className="text-highlight font-semibold">
           Experiences
         </Typography>
@@ -23,7 +23,7 @@ export default function page() {
                 })}
               />
               {index !== CAREERS.length - 1 && (
-                <div className="flex justify-center items-center">
+                <div className="hidden sm:flex justify-center items-center">
                   <svg
                     viewBox="0 0 400 300"
                     xmlns="http://www.w3.org/2000/svg"

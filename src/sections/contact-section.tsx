@@ -14,7 +14,7 @@ import { toast } from "sonner";
 const CONTACT_INFO = [
   {
     label: "Email",
-    value: "prajwolshrestha08@gmail.com",
+    value: "hello@shresthaprajwol.com.np",
     icon: <Mail className="w-5 h-5 text-gray-400" />,
     type: "email",
   },
@@ -48,7 +48,6 @@ export default function ContactSection() {
     setIsPending(true)
     try {
       const formData = new FormData(e.currentTarget);
-      console.log(formData, 'formDataformData')
       const response = await sendEmail(formData);
       setIsPending(false)
       if(response.success) {

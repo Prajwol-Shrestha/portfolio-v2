@@ -35,7 +35,7 @@ export const SOCIAL_LINKS = [
   {
     label: "Gmail",
     icon: "mdi:gmail",
-    link: "mailto:prajwolshrestha08@gmail.com",
+    link: "mailto:hello@shresthaprajwol.com.np",
   },
 ];
 

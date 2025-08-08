@@ -5,8 +5,6 @@ export default function Footer() {
   const linkedInLink = SOCIAL_LINKS.find(
     (link) => link.label.toLowerCase() === "linkedin"
   );
-
-  console.log(linkedInLink, 'sad')
   return (
     <footer className="mt-auto py-4 text-center border-t border-foreground text-sm text-muted-foreground">
       <p>

@@ -27,8 +27,8 @@ export default async function sendEmail(
 
   try {
     const { data, error } = await resend.emails.send({
-      from: `Portfolio Site <info@shresthaprajwol.com.np>`,
-      to: "prajwolshrestha08@gmail.com",
+      from: `Portfolio Site <hello@shresthaprajwol.com.np>`,
+      to: "hello@shresthaprajwol.com.np",
       subject: "New Message from Portfolio Site",
       react: ContactEmailTemplate({ name, email, message }),
       replyTo: email,

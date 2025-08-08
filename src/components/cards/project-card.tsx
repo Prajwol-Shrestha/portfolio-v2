@@ -17,7 +17,7 @@ export default function ProjectCard({ project }: IProps) {
   const { name, screenshot, github, deployedUrl, type } = project;
   return (
     <div className="">
-      <div className="bg-secondary rounded-xl p-8 h-70">
+      <div className="bg-secondary rounded-xl p-6 lg:p-8 h-70">
         <img
           src={screenshot}
           alt={name}

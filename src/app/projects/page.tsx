@@ -12,7 +12,7 @@ export default function page() {
   );
   return (
     <main>
-      <section className="my-22">
+      <section className="my-12 sm:my-22">
         <Typography
           component="h4"
           variant={"h5"}
