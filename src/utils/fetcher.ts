@@ -8,7 +8,16 @@ export default async function fetcher<T>(
       const params = new URLSearchParams(queryParams);
       endpoint.search = params.toString();
     }
-    const response = await fetch(endpoint.toString());
+    const response = await fetch(endpoint.toString(), {
+      headers: {
+        "Content-Type": "application/json",
+        'User-Agent':
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ' +
+        'AppleWebKit/537.36 (KHTML, like Gecko) ' +
+        'Chrome/115.0.0.0 Safari/537.36',
+      }
+    });
+
     const data = await response.json();
 
     return data;

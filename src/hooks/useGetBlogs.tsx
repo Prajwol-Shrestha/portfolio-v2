@@ -6,23 +6,23 @@ export default function useGetBlogs(query?: Record<string, any>) {
   const [blogs, setBlogs] = useState<IDevToArticle[]>();
   const [isLoading, setIsLoading] = useState(false);
 
-    const queryParams = {
-        username: 'prajwolshrestha',
-        ...query,
-    }
-    
+  const queryParams = {
+    username: "prajwolshrestha",
+    ...query,
+  };
+  async function get() {
+    const blogss = await getBlogs(queryParams);
+    setBlogs(blogss);
+  }
+
   useEffect(() => {
     try {
       setIsLoading(true);
-      async function get() {
-        const blogss = await getBlogs(queryParams);
-        setBlogs(blogss);
-      }
       get();
     } finally {
       setIsLoading(false);
     }
-  });
+  }, []);
 
   return {
     blogs,
