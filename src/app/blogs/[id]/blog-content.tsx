@@ -12,7 +12,14 @@ interface IProps {
 }
 
 export default function BlogContent({ blog }: IProps) {
-  const { title, published_at, body_markdown, user, tags } = blog;
+  const {
+    title,
+    published_at,
+    body_markdown,
+    user,
+    tags,
+    reading_time_minutes,
+  } = blog;
   const longDate = formatDateLongStyle(published_at);
 
   return (
@@ -29,13 +36,18 @@ export default function BlogContent({ blog }: IProps) {
           }}
         />
       </div>
-      <div className=" overflow-auto px-8 pb-16 pt-16">
+      <div className=" overflow-auto sm:px-8 pb-16 pt-16">
         <Typography variant={"h3"} component="h1" className="font-bold">
           {title}
         </Typography>
-        <div className="my-6 flex items-center flex-wrap text-gray-400">
-          <Typography variant={"body2"}>Published At: {longDate}</Typography>
-          <Dot />
+        <div className="my-6 text-gray-400">
+          <div className="flex items-center flex-wrap ">
+            <Typography variant={"body2"}>Published At: {longDate}</Typography>
+            <Dot />
+            <Typography variant={"body2"}>
+              Reading Time: {reading_time_minutes} minutes
+            </Typography>
+          </div>
           <Typography variant={"body2"}>Author: {user.name}</Typography>
         </div>
         <MarkDownWrapper markdown={body_markdown} />

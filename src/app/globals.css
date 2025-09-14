@@ -182,3 +182,8 @@ path:nth-child(6) {
     animation: scroll-lg 40s linear infinite;
   }
 }
+
+
+hr{
+  margin: 2rem 20vw;
+}
