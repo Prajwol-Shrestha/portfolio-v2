@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/text-area";
 import Typography from "@/components/ui/Typography";
 import { Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { toast } from "sonner";
 
 const CONTACT_INFO = [
@@ -39,9 +39,9 @@ const CONTACT_INFO = [
 ];
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [isPending, setIsPending] = useState(false)
-  
+
+  const formRef = useRef<HTMLFormElement>(null)
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -50,8 +50,8 @@ export default function ContactSection() {
       const formData = new FormData(e.currentTarget);
       const response = await sendEmail(formData);
       setIsPending(false)
-      if(response.success) {
-        setFormData({ name: '', email: '', message: '' })
+      if (response.success) {
+        formRef?.current?.reset();
         toast.success(response.message);
         return
       }
@@ -71,7 +71,7 @@ export default function ContactSection() {
           Let's start a project together
         </Typography>
 
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-5" ref={formRef}>
           <div className="space-y-2">
             <Label htmlFor="name">Full Name</Label>
             <Input type="text" id="name" name="name" placeholder="Random User" required min={3} max={100} />
