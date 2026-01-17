@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fdfefe;
+  --background: #f8fafc;
   --foreground: #09090b;
 
   --primary: #11743d;
-  --secondary: #e6e6e9;
+  --primary-foreground: #ffffff;
+  --secondary: #ffffff;
 
   --highlight: #1b9c54;
-  --border: #23232a;
+  --border: #e2e8f0;
 
   --font-heading: var(--font-maron-barista);
   --font-body: var(--font-inter);
@@ -19,6 +20,7 @@
   --foreground: #fdfefe;
 
   --primary: #00bc7d;
+  --primary-foreground: #ffffff;
   --secondary: #111116;
 
   --highlight: #b5ff6d;
@@ -30,6 +32,7 @@
   --color-foreground: var(--foreground);
 
   --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
 
   --color-highlight: var(--highlight);
@@ -145,6 +148,13 @@ path:nth-child(6) {
 
 .mask {
   -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask-image: linear-gradient(
     90deg,
     transparent,
     white 20%,

@@ -2,6 +2,7 @@ export const NAV_ITEMS = [
   {
     label: "Home",
     href: "/",
+    icon: "lucide:home",
   },
   // {
   //     label: "Skills",
@@ -10,14 +11,17 @@ export const NAV_ITEMS = [
   {
     label: "Projects",
     href: "/projects",
+    icon: "lucide:folder",
   },
   {
     label: "Experience",
     href: "/experiences",
+    icon: "lucide:briefcase",
   },
   {
     label: "Blogs",
     href: "/blogs",
+    icon: "lucide:book-open",
   },
 ];
 

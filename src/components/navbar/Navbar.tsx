@@ -108,42 +108,24 @@ export default function Navbar() {
                 >
                   <div className="overflow-hidden rounded-[2.5rem] border border-border/50 bg-background/90 p-4 shadow-2xl backdrop-blur-xl">
                     <div className="grid grid-cols-4 gap-2">
-                      {NAV_ITEMS.map((item) => {
-                        // Simple icon mapping based on labels
-                        const getIcon = (label: string) => {
-                          switch (label.toLowerCase()) {
-                            case "home":
-                              return "lucide:home";
-                            case "projects":
-                              return "lucide:folder";
-                            case "experience":
-                              return "lucide:briefcase";
-                            case "blogs":
-                              return "lucide:book-open";
-                            default:
-                              return "lucide:link";
-                          }
-                        };
-
-                        return (
-                          <Link
-                            href={item.href}
-                            key={item.label}
-                            onClick={() => setIsOpen(false)}
-                            className="flex flex-col items-center gap-1 rounded-2xl py-3 transition-colors hover:bg-secondary/50"
-                          >
-                            <div className="flex size-10 items-center justify-center rounded-full bg-secondary/30 text-highlight">
-                              <Icon
-                                icon={getIcon(item.label)}
-                                className="size-5"
-                              />
-                            </div>
-                            <Typography variant="caption" className="font-bold">
-                              {item.label}
-                            </Typography>
-                          </Link>
-                        );
-                      })}
+                      {NAV_ITEMS.map((item) => (
+                        <Link
+                          href={item.href}
+                          key={item.label}
+                          onClick={() => setIsOpen(false)}
+                          className="flex flex-col items-center gap-1 rounded-2xl py-3 transition-colors hover:bg-secondary/50"
+                        >
+                          <div className="flex size-10 items-center justify-center rounded-full bg-secondary/30 text-highlight">
+                            <Icon
+                              icon={item.icon || "lucide:link"}
+                              className="size-5"
+                            />
+                          </div>
+                          <Typography variant="caption" className="font-bold">
+                            {item.label}
+                          </Typography>
+                        </Link>
+                      ))}
                     </div>
 
                     <div className="mt-4 border-t border-border/40 pt-4 px-2">

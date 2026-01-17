@@ -11,8 +11,8 @@ type ContactInfo = {
 };
 
 interface IProps {
-    contactInfos: ContactInfo[];
-    className?: string
+  contactInfos: ContactInfo[];
+  className?: string;
 }
 
 export default function ContactInfoCard({ contactInfos, className }: IProps) {
@@ -33,7 +33,12 @@ export default function ContactInfoCard({ contactInfos, className }: IProps) {
   }
 
   return (
-    <div className={cn("bg-secondary rounded-xl p-8 space-y-3", className)}>
+    <div
+      className={cn(
+        "bg-secondary rounded-2xl p-8 space-y-4 border border-border/50 shadow-sm",
+        className
+      )}
+    >
       {contactInfos.map((info, index) => (
         <div
           key={index}

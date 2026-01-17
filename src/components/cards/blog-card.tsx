@@ -27,7 +27,12 @@ export default function BlogCard({ blog, className }: IProps) {
 
   return (
     <Link href={`/blogs/${id}`} className="block">
-      <div className={cn("bg-secondary rounded-xl p-6 flex gap-4 sm:flex-row", className)}>
+      <div
+        className={cn(
+          "bg-secondary rounded-2xl p-6 flex gap-6 sm:flex-row border border-border/50 shadow-sm hover:shadow-md transition-all duration-300 group-hover:border-highlight/30",
+          className
+        )}
+      >
         <div className="h-40 w-70 shrink-0 hidden sm:block">
           <img
             src={imageUrl}

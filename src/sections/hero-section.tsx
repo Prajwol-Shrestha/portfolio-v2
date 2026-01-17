@@ -16,7 +16,7 @@ export default function HeroSection() {
         </Typography>
       </div>
 
-      <Typography component="h3" variant={"h3"} className="sm:w-3/4 max-w-3xl">
+      <Typography component="h3" variant={"h3"} className="sm:w-3/4 max-w-3xl font-bold">
         {" "}
         Crafting{" "}
         <span className="text-highlight">
@@ -42,7 +42,7 @@ export default function HeroSection() {
             <Link key={social.label} href={social.link} target="_blank">
               <Button
                 variant="link"
-                className="rounded-full text-white uppercase"
+                className="rounded-full text-white dark:text-black uppercase"
               >
                 {social.label}
                 <Icon icon="mingcute:arrow-right-up-line" ssr={true} />

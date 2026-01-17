@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import sendEmail from "@/actions/send-email";
 import ContactInfoCard from "@/components/cards/contact-info-card";
@@ -39,32 +39,39 @@ const CONTACT_INFO = [
 ];
 
 export default function ContactSection() {
-  const [isPending, setIsPending] = useState(false)
+  const [isPending, setIsPending] = useState(false);
 
-  const formRef = useRef<HTMLFormElement>(null)
+  const formRef = useRef<HTMLFormElement>(null);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setIsPending(true)
+    setIsPending(true);
     try {
       const formData = new FormData(e.currentTarget);
       const response = await sendEmail(formData);
-      setIsPending(false)
+      setIsPending(false);
       if (response.success) {
         formRef?.current?.reset();
         toast.success(response.message);
-        return
+        return;
       }
       toast.error(response.message);
     } finally {
-      setIsPending(false)
+      setIsPending(false);
     }
   }
 
   return (
-    <section id="contact-section" className="flex gap-12 justify-between items-center">
+    <section
+      id="contact-section"
+      className="flex gap-12 justify-between items-center"
+    >
       <div className="basis-full sm:basis-2/3">
-        <Typography variant={"h5"} component="h5" className="text-highlight font-semibold">
+        <Typography
+          variant={"h5"}
+          component="h5"
+          className="text-highlight font-semibold"
+        >
           Connect with Me
         </Typography>
         <Typography variant={"h4"} className="font-bold mb-6">
@@ -74,7 +81,15 @@ export default function ContactSection() {
         <form onSubmit={handleSubmit} className="space-y-5" ref={formRef}>
           <div className="space-y-2">
             <Label htmlFor="name">Full Name</Label>
-            <Input type="text" id="name" name="name" placeholder="Random User" required min={3} max={100} />
+            <Input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Random User"
+              required
+              min={3}
+              max={100}
+            />
           </div>
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
@@ -100,10 +115,10 @@ export default function ContactSection() {
               maxLength={300}
             />
           </div>
-              <Button
+          <Button
             type="submit"
             disabled={isPending}
-            className=" flex items-center font-semibold min-w-32 "
+            className="flex items-center font-semibold min-w-32 "
           >
             Submit
             <Send className="font-semibold" />
