@@ -9,12 +9,13 @@ export default async function Page({
 }) {
   const { id } = await params;
   const blog = await getSingleBlog(id);
+  const isMyArticle = blog?.user.username === "prajwolshrestha";
 
-  if (!blog) throw notFound();
+  if (!blog || !isMyArticle) throw notFound();
 
   return (
     <main className="section-wrapper">
-     <BlogContent blog={blog} />
+      <BlogContent blog={blog} />
     </main>
   );
 }
