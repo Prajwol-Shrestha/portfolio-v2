@@ -1,9 +1,11 @@
 "use client";
 
 import BlogCard from "@/components/cards/blog-card";
+import { Button } from "@/components/ui/button";
 import Typography from "@/components/ui/Typography";
 import useGetBlogs from "@/hooks/useGetBlogs";
 import clsx from "clsx";
+import Link from "next/link";
 
 export default function BlogsSections() {
   const query = {
@@ -17,7 +19,11 @@ export default function BlogsSections() {
       {isLoading && <> loading... </>}
       {blogs ? (
         <section>
-          <Typography variant={"h5"} component="h5" className="text-highlight font-semibold">
+          <Typography
+            variant={"h5"}
+            component="h5"
+            className="text-highlight font-semibold"
+          >
             Latest Blogs
           </Typography>
 
@@ -32,6 +38,15 @@ export default function BlogsSections() {
               />
             ))}
           </div>
+          <Link href={"/blogs"}>
+            <Button
+              variant="outline"
+              className="rounded-full mt-16 mx-auto block"
+            >
+              {" "}
+              View All Blogs{" "}
+            </Button>
+          </Link>
         </section>
       ) : null}
     </>

@@ -52,7 +52,7 @@ export default function BlogCard({ blog, className }: IProps) {
               {reading_time_minutes} min read{" "}
             </Typography>
           </div>
-          <div className="flex flex-wrap gap-3 mt-auto">
+          <div className="flex flex-wrap gap-x-3 gap-y-1 mt-auto">
             {tag_list.map((tag) => (
               <Typography key={tag} variant={"body2"} className="text-gray-400">
                 #{tag}
