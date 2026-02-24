@@ -9,7 +9,7 @@ export default async function Page({
 }) {
   const { id } = await params;
   const blog = await getSingleBlog(id);
-  const isMyArticle = blog?.user.username === "prajwolshrestha";
+  const isMyArticle = blog?.user?.username === "prajwolshrestha";
 
   if (!blog || !isMyArticle) throw notFound();
 
