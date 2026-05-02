@@ -4,6 +4,21 @@ import arrowAnimationData from "@/lotties/arrow.json";
 import LottieWrapper from "@/components/lottie-wrapper/lottie-wrapper";
 
 export default function AboutSection() {
+  const startDate = new Date("2022-12-01");
+  const currentDate = new Date();
+
+  const diffInMonths =
+    (currentDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24 * 30);
+  const years = Math.floor(diffInMonths / 12);
+  const months = Math.round(diffInMonths % 12);
+
+  const totalExp = `${years}${months > 0 ? "+" : ""}`;
+
+  // if directly as a children pass gareko vaye React le split gardintheo
+  // like ["Hi, I’m Prajwol… over ", "3+", " years now …"]
+  // so as a string yai banako, for  this to work 
+  const aboutText = `Hi, I’m Prajwol. I’ve been working in software development for over ${totalExp} years now, focusing on creating practical and effective digital solutions. I enjoy teaming up with others to build products that really work well and make a difference.`;
+
   return (
     <section>
       <div className="flex items-center justify-center relative">
@@ -27,10 +42,7 @@ export default function AboutSection() {
         blurStrength={10}
         textClassName="md:text-center  md:leading-10"
       >
-        Hi, I’m Prajwol. I’ve been working in software development for over 2
-        years now, focusing on creating practical and effective digital
-        solutions. I enjoy teaming up with others to build products that really
-        work well and make a difference.
+        {aboutText}
       </ScrollReveal>
     </section>
   );
